@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from '../components/Product';
-import data from '../data';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
@@ -15,7 +14,7 @@ export default function HomeScreen() {
       setLoading(true);
       const {data} = await axios.get('api/products');
       setLoading(false);
-      setProducts(data);
+      setProducts(data.products);
     }catch(error) {
     setError(error.message);
     setLoading(false);
@@ -30,7 +29,7 @@ export default function HomeScreen() {
         : (
           <div className="row center">
           {
-            data.products.map((product) => (
+            products.map((product) => (
             <Product 
               key={product._id} 
               product={product} 
