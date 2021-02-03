@@ -21,6 +21,9 @@ li {
 .danger {
   color: #a02020;
 }
+input,
+select,
+textArea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -30,9 +33,14 @@ button {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
+input:hover,
+select:hover,
+textArea:hover,
 button:hover {
   border: 0.1rrem #404040 solid;
 }

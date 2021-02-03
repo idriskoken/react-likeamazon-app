@@ -1,5 +1,4 @@
-const data = {
-    products : [
+const data = [
         {
             _id: '1',
             name: 'Nike Slim Shirt',
@@ -73,6 +72,6 @@ const data = {
             description: 'gigh quality product',
         }
     ]
-};
+;
 
-module.exports.products= data.products;
+module.exports= data;
