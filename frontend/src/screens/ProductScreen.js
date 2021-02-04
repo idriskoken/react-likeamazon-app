@@ -20,7 +20,7 @@ export default function ProductScreen(props) {
     //     return <div>Product Not Found!!!</div>
     // }
     useEffect(() => {
-        dispatch(detailsProduct())
+        dispatch(detailsProduct(productId))
     }, [dispatch, productId]);
 
     const addToCardHandler = () => {
